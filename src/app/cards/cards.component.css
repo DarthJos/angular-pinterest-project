@@ -1,4 +1,4 @@
-.gallery {
+#content {
   columns: 7 200px;
   column-gap: 1em;
 }
