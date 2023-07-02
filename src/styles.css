@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   background-color: #ffffff;
-  margin: 1em 5em;
+  margin: 5.5em 5em 1em;
 }
 
 @media screen and (max-width: 808px) {
   body {
-    margin: 1em;
+    margin: 5.5em 1em 1em;
   }
 }
