@@ -1,1 +1,6 @@
-<app-cards></app-cards>
+<header>
+  <app-search-banner (queryEmmiter)="fwdQueryToCards($event)"></app-search-banner>
+</header>
+<main id="content">
+  <app-cards [queryInput]="searchQuery"></app-cards>
+</main>

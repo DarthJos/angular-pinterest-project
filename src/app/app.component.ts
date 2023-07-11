@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-pinterest-project';
+  searchQuery: any;
+
+  fwdQueryToCards($event: any) {
+    this.searchQuery = $event;
+  }
 }
