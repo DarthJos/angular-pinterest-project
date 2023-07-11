@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ApiService } from './../service/api.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-banner',
@@ -7,9 +8,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchBannerComponent implements OnInit {
 
-  constructor() { }
+  inicioSelected = true;
+  explorarSelected = false;
+
+  query = '';
+  @Output() queryEmmiter = new EventEmitter<any>();
+  /* results: any[] = []; */
+
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
   }
 
+  sendQuery(query:any) {
+    console.log(this.query)
+    console.log(query)
+    this.queryEmmiter.emit(query);
+  }
+
+  onInicioClicked() {
+    this.inicioSelected = true;
+    this.explorarSelected = false;
+  }
+
+  onExplorarClicked() {
+    this.inicioSelected = false;
+    this.explorarSelected = true;
+  }
 }

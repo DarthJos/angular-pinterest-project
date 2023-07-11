@@ -6,10 +6,10 @@
   </div>
 
   <div class="nav-button">
-    <a class="selected-button" href="#">Inicio</a>
+    <span [ngClass]="inicioSelected ? 'selected-button' : ''" (click)="onInicioClicked()" href="#">Inicio</span>
   </div>
   <div class="nav-button">
-    <span>Explorar</span>
+    <span [ngClass]="explorarSelected ? 'selected-button' : ''" (click)="onExplorarClicked()">Explorar</span>
   </div>
 
   <div class="dropdown">
@@ -25,7 +25,7 @@
 
   <div class="search-bar">
     <button><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png" alt="search"></button>
-    <input type="text" class="finder" placeholder="Search">
+    <input type="text" class="finder" placeholder="Search" [ngModel]="query" (ngModelChange)="sendQuery($event)">
   </div>
   <div class="right-icons">
     <div>
