@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CardsComponent } from './cards/cards.component';
 import { CardComponent } from './card/card.component';
 import { SearchBannerComponent } from './search-banner/search-banner.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SearchBannerComponent } from './search-banner/search-banner.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
