@@ -1,7 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
+
 body {
   background-color: #ffffff;
   margin: 5.5em 5em 1em;
+  font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
 }
 
 @media screen and (max-width: 808px) {
